@@ -1,0 +1,707 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Frame_2 = Instance.new("Frame")
+local TextButton1 = Instance.new("TextButton")
+local TextButton2 = Instance.new("TextButton")
+local TextButton3 = Instance.new("TextButton")
+local TextButton4 = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local ImageButton = Instance.new("ImageButton")
+local ScreenGui_2 = Instance.new("ScreenGui")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 149, 0)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.356886029, 0, -0.000402729172, 0)
+Frame.Size = UDim2.new(0, 370, 0, 322)
+
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0.0141281541, 0, 0.018477872, 0)
+Frame_2.Size = UDim2.new(0, 358, 0, 310)
+
+TextButton1.Name = "TextButton 1"
+TextButton1.Parent = Frame_2
+TextButton1.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
+TextButton1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton1.BorderSizePixel = 0
+TextButton1.Position = UDim2.new(0.0579315685, 0, 0.858703315, 0)
+TextButton1.Size = UDim2.new(0, 86, 0, 28)
+TextButton1.AutoButtonColor = false
+TextButton1.Font = Enum.Font.Unknown
+TextButton1.Text = "SPEED"
+TextButton1.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton1.TextScaled = true
+TextButton1.TextSize = 14.000
+TextButton1.TextWrapped = true
+
+TextButton2.Name = "TextButton 2"
+TextButton2.Parent = Frame_2
+TextButton2.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
+TextButton2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton2.BorderSizePixel = 0
+TextButton2.Position = UDim2.new(0.381953925, 0, 0.858703315, 0)
+TextButton2.Size = UDim2.new(0, 86, 0, 28)
+TextButton2.AutoButtonColor = false
+TextButton2.Font = Enum.Font.Unknown
+TextButton2.Text = "NOCLIP"
+TextButton2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton2.TextScaled = true
+TextButton2.TextSize = 14.000
+TextButton2.TextWrapped = true
+
+TextButton3.Name = "TextButton 3"
+TextButton3.Parent = Frame_2
+TextButton3.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
+TextButton3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton3.BorderSizePixel = 0
+TextButton3.Position = UDim2.new(0.692009807, 0, 0.858703315, 0)
+TextButton3.Size = UDim2.new(0, 86, 0, 28)
+TextButton3.AutoButtonColor = false
+TextButton3.Font = Enum.Font.Unknown
+TextButton3.Text = "FLY"
+TextButton3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton3.TextScaled = true
+TextButton3.TextSize = 14.000
+TextButton3.TextWrapped = true
+
+TextButton4.Name = "TextButton 4"
+TextButton4.Parent = Frame_2
+TextButton4.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
+TextButton4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton4.BorderSizePixel = 0
+TextButton4.Position = UDim2.new(0.0579315685, 0, 0.719993651, 0)
+TextButton4.Size = UDim2.new(0, 86, 0, 28)
+TextButton4.AutoButtonColor = false
+TextButton4.Font = Enum.Font.Unknown
+TextButton4.Text = "TP"
+TextButton4.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton4.TextScaled = true
+TextButton4.TextSize = 14.000
+TextButton4.TextWrapped = true
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 162, 0)
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.0330470726, 0, 0.0403726697, 0)
+TextLabel.Size = UDim2.new(0, 343, 0, 19)
+TextLabel.Font = Enum.Font.Unknown
+TextLabel.Text = "Gu1 K0kac0l1 16"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+ImageButton.Parent = ScreenGui
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.BackgroundTransparency = 1.000
+ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.725506365, 0, -0.0183732584, 0)
+ImageButton.Size = UDim2.new(0, 100, 0, 96)
+ImageButton.Image = "rbxassetid://129027737518656"
+
+ScreenGui_2.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui_2.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+-- Scripts:
+
+local function QYPDDN_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UIS = game:GetService('UserInputService')
+	
+	local frame = script.Parent
+	
+	
+	local dragToggle = nil
+	
+	local dragSpeed = 0.25
+	
+	local dragStart = nil
+	
+	local startPos = nil
+	
+	
+	
+	local function updateInput(input)
+	
+		local delta = input.Position - dragStart
+	
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+	
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	
+	end
+	
+	
+	
+	frame.InputBegan:Connect(function(input)
+	
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+	
+			dragToggle = true
+	
+			dragStart = input.Position
+	
+			startPos = frame.Position
+	
+			input.Changed:Connect(function()
+	
+				if input.UserInputState == Enum.UserInputState.End then
+	
+					dragToggle = false
+	
+				end
+	
+			end)
+	
+		end
+	
+	end)
+	
+	
+	
+	UIS.InputChanged:Connect(function(input)
+	
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	
+			if dragToggle then
+	
+				updateInput(input)
+	
+			end
+	
+		end
+	
+	end)
+	
+	
+end
+coroutine.wrap(QYPDDN_fake_script)()
+local function ADKYYHH_fake_script() -- TextButton1.LocalScript 
+	local script = Instance.new('LocalScript', TextButton1)
+
+	local button = script.Parent
+	local superSpeed = 2500
+	local normalSpeed = 16 -- стандартная скорость по умолчанию
+	local isSpeedActive = false -- состояние включения скорости
+	
+	local function toggleSpeed()
+		local player = game.Players.LocalPlayer
+		if not player.Character then return end
+		local humanoid = player.Character:FindFirstChildOfClass("Humanoid")
+		if not humanoid then return end
+	
+		if not isSpeedActive then
+			-- Включаем суперскорость
+			humanoid.WalkSpeed = superSpeed
+			isSpeedActive = true
+		else
+			-- Выключаем и возвращаем стандартную скорость
+			humanoid.WalkSpeed = normalSpeed
+			isSpeedActive = false
+		end
+	end
+	
+	button.MouseButton1Click:Connect(toggleSpeed)
+	
+	-- Обработчик, если персонаж умирает и возрождается
+	local player = game.Players.LocalPlayer
+	local function onCharacterAdded(character)
+		local humanoid = character:WaitForChild("Humanoid")
+		-- При возрождении сбрасываем скорость и состояние
+		humanoid.WalkSpeed = normalSpeed
+		isSpeedActive = false
+	end
+	
+	player.CharacterAdded:Connect(onCharacterAdded)
+	-- Если персонаж уже есть при запуске
+	if player.Character then
+		onCharacterAdded(player.Character)
+	end
+end
+coroutine.wrap(ADKYYHH_fake_script)()
+local function CFELVXW_fake_script() -- TextButton2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton2)
+
+	local Player = game:GetService("Players").LocalPlayer --Sets up variable for the Player
+	local RunService = game:GetService("RunService") --Sets up variable for the RunService
+	
+	local isnoclipping = false --Sets the no-clip to initialy false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if isnoclipping== true then
+			isnoclipping=false
+			script.Parent.Text = "NOCLIP OFF" --Changes the text to OFF
+			script.Parent.BackgroundColor3 = Color3.new(1, 0.666667, 0) --Bright Red Color
+		else	
+			isnoclipping=true
+			script.Parent.Text = "NOCLIP ON" --Changes the text to ON
+			script.Parent.BackgroundColor3 = Color3.new(1, 0.666667, 0) --Bright Green Color
+		end
+	end)
+	
+	RunService.Stepped:Connect(function()
+		if Player.Character then
+			if isnoclipping == true then
+				for i,v in pairs(Player.Character:GetDescendants()) do
+					if v:IsA("BasePart") then
+						v.CanCollide = false
+					end
+				end
+			end	
+		end
+	end)
+end
+coroutine.wrap(CFELVXW_fake_script)()
+local function KAVAAD_fake_script() -- TextButton3.LocalScript 
+	local script = Instance.new('LocalScript', TextButton3)
+
+	-- LocalScript (ИДЕАЛЬНЫЙ для ПК+МОБИЛКИ!)
+	local Players = game:GetService("Players")
+	local UserInputService = game:GetService("UserInputService")
+	local RunService = game:GetService("RunService")
+	
+	local player = Players.LocalPlayer
+	local flying = false
+	local flySpeed = 50
+	local bodyVelocity = nil
+	local flyConnection = nil
+	
+	-- ЗАМЕНИ НА СВОЮ TextButton!
+	local flyButton = script.Parent.Frame:WaitForChild("FlyButton")
+	
+	local function startFlying()
+		local character = player.Character
+		if not character then return end
+		local rootPart = character:FindFirstChild("HumanoidRootPart")
+		if not rootPart then return end
+	
+		flying = true
+	
+		bodyVelocity = Instance.new("BodyVelocity")
+		bodyVelocity.MaxForce = Vector3.new(1e5, 1e5, 1e5)
+		bodyVelocity.Velocity = Vector3.new()
+		bodyVelocity.Parent = rootPart
+	
+		flyConnection = RunService.Heartbeat:Connect(function()
+			if not flying or not rootPart.Parent then return end
+	
+			local camera = workspace.CurrentCamera
+			local moveVector = Vector3.new()
+	
+			-- ✅ ПК: WASD + Space/Shift
+			if UserInputService:IsKeyDown(Enum.KeyCode.W) then
+				moveVector = moveVector + camera.CFrame.LookVector
+			end
+			if UserInputService:IsKeyDown(Enum.KeyCode.S) then
+				moveVector = moveVector - camera.CFrame.LookVector
+			end
+			if UserInputService:IsKeyDown(Enum.KeyCode.A) then
+				moveVector = moveVector - camera.CFrame.RightVector
+			end
+			if UserInputService:IsKeyDown(Enum.KeyCode.D) then
+				moveVector = moveVector + camera.CFrame.RightVector
+			end
+			if UserInputService:IsKeyDown(Enum.KeyCode.Space) then
+				moveVector = moveVector + Vector3.new(0, 1, 0)
+			end
+			if UserInputService:IsKeyDown(Enum.KeyCode.LeftShift) then
+				moveVector = moveVector - Vector3.new(0, 1, 0)
+			end
+	
+			-- ✅ МОБИЛКА: стандартный джойстик + камера!
+			local humanoid = character:FindFirstChild("Humanoid")
+			if humanoid then
+				local moveDir = humanoid.MoveDirection -- ДЖОЙСТИК!
+	
+				if moveDir.Magnitude > 0 then
+					local forward = camera.CFrame.LookVector
+					local right = camera.CFrame.RightVector
+					moveVector = moveVector + (forward * moveDir.Z + right * moveDir.X)
+				end
+	
+				-- 🎮 АВТОВЗЛЁТ: смотришь вверх = летишь вверх!
+				local lookUp = -camera.CFrame.LookVector.Y -- 1=вверх, -1=вниз
+				if math.abs(lookUp) > 0.2 then
+					moveVector = moveVector + Vector3.new(0, lookUp * 2, 0)
+				end
+			end
+	
+			bodyVelocity.Velocity = moveVector.Unit * flySpeed
+		end)
+	end
+	
+	local function stopFlying()
+		flying = false
+		if flyConnection then
+			flyConnection:Disconnect()
+			flyConnection = nil
+		end
+	
+		local character = player.Character
+		if character then
+			local rootPart = character:FindFirstChild("HumanoidRootPart")
+			local humanoid = character:FindFirstChild("Humanoid")
+	
+			if bodyVelocity then
+				bodyVelocity:Destroy()
+				bodyVelocity = nil
+			end
+	
+			-- ❌ НИКАКИХ ПАДЕНИЙ!
+			if rootPart and humanoid then
+				rootPart.Velocity = Vector3.new(0, 0, 0)
+				humanoid.PlatformStand = false
+				humanoid.JumpPower = 50
+			end
+		end
+	end
+	
+	-- 🎯 КНОПКА ПОЛЕТА
+	flyButton.MouseButton1Click:Connect(function()
+		if flying then
+			stopFlying()
+			flyButton.Text = "✈️ Fly OFF"
+			flyButton.BackgroundColor3 = Color3.fromRGB(255, 100, 100)
+		else
+			startFlying()
+			flyButton.Text = "✈️ Fly ON"
+			flyButton.BackgroundColor3 = Color3.fromRGB(100, 255, 100)
+		end
+	end)
+	
+	-- 🔄 РЕСПАВН
+	player.CharacterAdded:Connect(function()
+		task.wait(0.1)
+		if flying then
+			stopFlying()
+			startFlying()
+		end
+	end)
+	
+	print("✅ Fly ПК(клавиши)+МОБИЛКА(джойстик+камера) готов!")
+	
+end
+coroutine.wrap(KAVAAD_fake_script)()
+local function ZGYOOWI_fake_script() -- TextButton4.LocalScript 
+	local script = Instance.new('LocalScript', TextButton4)
+
+	local button = script.Parent
+	local player = game.Players.LocalPlayer
+	local mouse = player:GetMouse()
+	local teleportMode = false
+	
+	button.Text = "TP"
+	
+	button.MouseButton1Click:Connect(function()
+		teleportMode = not teleportMode
+		button.Text = teleportMode and "TP ON" or "ТP OFF"
+	end)
+	
+	mouse.Button1Down:Connect(function()
+		if teleportMode then
+			local character = player.Character
+			if character and character:FindFirstChild("HumanoidRootPart") then
+				local hrp = character.HumanoidRootPart
+				local pos = mouse.Hit.p
+				hrp.CFrame = CFrame.new(pos + Vector3.new(0, 3, 0)) -- приподнимает над точкой, чтобы не застрял
+			end
+		end
+	end)
+end
+coroutine.wrap(ZGYOOWI_fake_script)()
+local function VNBIGM_fake_script() -- ImageButton.LocalScript 
+	local script = Instance.new('LocalScript', ImageButton)
+
+	local button = script.Parent
+	local isOpen = true -- состояние, открыто или закрыто
+	
+	local function toggleGUI()
+		local parentGui = button.Parent
+		if isOpen then
+			-- скрываем все, кроме самой кнопки
+			for _, child in pairs(parentGui:GetChildren()) do
+				if child ~= button and child:IsA("GuiObject") then
+					child.Visible = false
+				end
+			end
+			isOpen = false
+		else
+			-- показываем всё обратно
+			for _, child in pairs(parentGui:GetChildren()) do
+				if child ~= button and child:IsA("GuiObject") then
+					child.Visible = true
+				end
+			end
+			isOpen = true
+		end
+	end
+	
+	-- Используем событие Activated для ImageButton (поддерживает клик)
+	button.Activated:Connect(toggleGUI)
+end
+coroutine.wrap(VNBIGM_fake_script)()
+local function INOWE_fake_script() -- ImageButton.LocalScript 
+	local script = Instance.new('LocalScript', ImageButton)
+
+	local UIS = game:GetService('UserInputService')
+	
+	local frame = script.Parent
+	
+	
+	local dragToggle = nil
+	
+	local dragSpeed = 0.25
+	
+	local dragStart = nil
+	
+	local startPos = nil
+	
+	
+	
+	local function updateInput(input)
+	
+		local delta = input.Position - dragStart
+	
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+	
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	
+	end
+	
+	
+	
+	frame.InputBegan:Connect(function(input)
+	
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+	
+			dragToggle = true
+	
+			dragStart = input.Position
+	
+			startPos = frame.Position
+	
+			input.Changed:Connect(function()
+	
+				if input.UserInputState == Enum.UserInputState.End then
+	
+					dragToggle = false
+	
+				end
+	
+			end)
+	
+		end
+	
+	end)
+	
+	
+	
+	UIS.InputChanged:Connect(function(input)
+	
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	
+			if dragToggle then
+	
+				updateInput(input)
+	
+			end
+	
+		end
+	
+	end)
+	
+	
+end
+coroutine.wrap(INOWE_fake_script)()
+local function TNXXZJ_fake_script() -- ScreenGui_2.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui_2)
+
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	local TweenService = game:GetService("TweenService")
+	
+	local player = Players.LocalPlayer
+	local follower = nil
+	local followConnection = nil
+	
+	local TORSO_COLOR_ID = 23
+	local DECAL_ID = "rbxassetid://1649721"
+	
+	-- ✅ DECAL 50% ПРОЗРАЧНЫЙ
+	local function activateDecals()
+		local torso = follower:FindFirstChild("Torso")
+		if not torso then return end
+	
+		for _, child in pairs(torso:GetChildren()) do
+			if child:IsA("Decal") then child:Destroy() end
+		end
+	
+		local frontDecal = Instance.new("Decal")
+		frontDecal.Name = "TShirtFront"
+		frontDecal.Texture = DECAL_ID
+		frontDecal.Face = Enum.NormalId.Front
+		frontDecal.Transparency = 0.5
+		frontDecal.Parent = torso
+	end
+	
+	-- ✅ РИГ (СУПЕР БЫСТРЫЙ)
+	local function createFollower()
+		follower = Instance.new("Model")
+		follower.Name = player.Name .. "_SuperFastRig"
+		follower.Parent = workspace
+	
+		local rootPart = Instance.new("Part")
+		rootPart.Name = "HumanoidRootPart"
+		rootPart.Size = Vector3.new(2, 2, 1)
+		rootPart.Transparency = 1
+		rootPart.CanCollide = false
+		rootPart.Anchored = false
+		rootPart.CustomPhysicalProperties = PhysicalProperties.new(0.7, 0.5, 0, 1, 1)  -- 0 ГРАВИТАЦИЯ!
+		rootPart.Parent = follower
+		follower.PrimaryPart = rootPart
+	
+		local torso = Instance.new("Part")
+		torso.Name = "Torso"
+		torso.Size = Vector3.new(2.1, 2.1, 1.1)
+		torso.Material = Enum.Material.Plastic
+		torso.Color = Color3.fromRGB(68, 57, 18)
+		torso.Transparency = 0.3
+		torso.CanCollide = false
+		torso.Anchored = false
+		torso.CustomPhysicalProperties = PhysicalProperties.new(0.7, 0.5, 0, 1, 1)  -- 0 ГРАВИТАЦИЯ!
+		torso.Parent = follower
+	
+		-- РУКИ + НОГИ (ТЕ ЖЕ)
+		local partsData = {
+			{name="Left Arm", color="Bright yellow"},
+			{name="Right Arm", color="Really black"},
+			{name="Left Leg", color="Bright yellow"},
+			{name="Right Leg", color="Really black"}
+		}
+	
+		for _, data in pairs(partsData) do
+			local part = Instance.new("Part")
+			part.Name = data.name
+			part.Size = Vector3.new(1, 2, 1)
+			part.Material = Enum.Material.Plastic
+			part.BrickColor = BrickColor.new(data.color)
+			part.Transparency = 0.5
+			part.CanCollide = false
+			part.Anchored = false
+			part.CustomPhysicalProperties = PhysicalProperties.new(0.7, 0.5, 0, 1, 1)
+			part.Parent = follower
+		end
+	
+		-- Motor6D (сокращено)
+		local leftArm = follower["Left Arm"]
+		local rightArm = follower["Right Arm"]
+		local leftLeg = follower["Left Leg"]
+		local rightLeg = follower["Right Leg"]
+	
+		local neck = Instance.new("Motor6D")
+		neck.Name = "Neck"; neck.Part0 = rootPart; neck.Part1 = torso
+		neck.C0 = CFrame.new(0, 1, 0); neck.Parent = rootPart
+	
+		local leftShoulder = Instance.new("Motor6D")
+		leftShoulder.Name = "Left Shoulder"; leftShoulder.Part0 = torso; leftShoulder.Part1 = leftArm
+		leftShoulder.C0 = CFrame.new(-1.5, 0.1, 0) * CFrame.Angles(0, math.rad(90), 0); leftShoulder.Parent = torso
+	
+		local rightShoulder = Instance.new("Motor6D")
+		rightShoulder.Name = "Right Shoulder"; rightShoulder.Part0 = torso; rightShoulder.Part1 = rightArm
+		rightShoulder.C0 = CFrame.new(1.5, 0.1, 0) * CFrame.Angles(0, math.rad(-90), 0); rightShoulder.Parent = torso
+	
+		local leftHip = Instance.new("Motor6D")
+		leftHip.Name = "Left Hip"; leftHip.Part0 = torso; leftHip.Part1 = leftLeg
+		leftHip.C0 = CFrame.new(-0.5, -2.0, 0); leftHip.Parent = torso
+	
+		local rightHip = Instance.new("Motor6D")
+		rightHip.Name = "Right Hip"; rightHip.Part0 = torso; rightHip.Part1 = rightLeg
+		rightHip.C0 = CFrame.new(0.5, -2.0, 0); rightHip.Parent = torso
+	end
+	
+	-- 🚀 СУПЕР БЫСТРОЕ СЛЕДОВАНИЕ!
+	local function startFollowing()
+		if follower then follower:Destroy() end
+	
+		createFollower()
+	
+		task.wait(0.05)  -- СВЕРХБЫСТРО!
+		activateDecals()
+	
+		-- ⚡ МАКСИМАЛЬНАЯ СКОРОСТЬ!
+		followConnection = RunService.Heartbeat:Connect(function()
+			local character = player.Character
+			if not character or not character:FindFirstChild("HumanoidRootPart") or not follower or not follower.PrimaryPart then return end
+	
+			local myRoot = character.HumanoidRootPart
+			local offset = (myRoot.CFrame.RightVector * 3.5) + (myRoot.CFrame.LookVector * -1) + Vector3.new(0, 2, 0)
+			local targetPos = myRoot.Position + offset
+	
+			local currentPos = follower.PrimaryPart.Position
+			local distance = (targetPos - currentPos).Magnitude
+	
+			-- 🚀 МАКС СКОРОСТЬ 150 + ТЕЛЕПОРТ!
+			if distance > 1.5 then
+				local direction = (targetPos - currentPos).Unit
+	
+				-- СВЕРХБЫСТРАЯ СКОРОСТЬ!
+				follower.PrimaryPart.Velocity = direction * 150
+				follower.PrimaryPart.AssemblyLinearVelocity = direction * 150
+	
+				-- 🧲 ТЕЛЕПОРТ если ОЧЕНЬ далеко!
+				if distance > 50 then
+					follower:SetPrimaryPartCFrame(CFrame.new(targetPos))
+					print("🧲 ТЕЛЕПОРТ!")
+				end
+	
+			else
+				-- СТОИТ РЯДОМ
+				follower.PrimaryPart.Velocity = Vector3.new(0, 0, 0)
+				follower.PrimaryPart.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+			end
+	
+			-- МГНОВЕННЫЙ ПОВОРОТ
+			local lookDirection = (myRoot.Position - follower.PrimaryPart.Position).Unit
+			follower:SetPrimaryPartCFrame(CFrame.lookAt(follower.PrimaryPart.Position, follower.PrimaryPart.Position + lookDirection))
+		end)
+	
+		print("🚀 СУПЕР БЫСТРЫЙ РИГ! 150+ ТЕЛЕПОРТ!")
+	end
+	
+	-- ⚡ МГНОВЕННЫЙ СТАРТ ПО РЕСЕТУ
+	player.CharacterAdded:Connect(function()
+		task.wait(0.05)  -- СВЕРХБЫСТРО!
+		startFollowing()
+	end)
+	
+	if player.Character then
+		task.wait(0.05)
+		startFollowing()
+	end
+	
+	print("💨 МАКСИМАЛЬНАЯ СКОРОСТЬ | НИКОГДА НЕ ОТСТАЁТ!")
+	
+end
+coroutine.wrap(TNXXZJ_fake_script)()
