@@ -24,15 +24,15 @@ Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(255, 149, 0)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.356886029, 0, -0.000402729172, 0)
-Frame.Size = UDim2.new(0, 370, 0, 322)
+Frame.Position = UDim2.new(0.35688597, 0, -0.001496771, 0)
+Frame.Size = UDim2.new(0, 346, 0, 302)
 
 Frame_2.Parent = Frame
 Frame_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame_2.BorderSizePixel = 0
-Frame_2.Position = UDim2.new(0.0141281541, 0, 0.018477872, 0)
-Frame_2.Size = UDim2.new(0, 358, 0, 310)
+Frame_2.Position = UDim2.new(0.0141473161, 0, 0.0182998702, 0)
+Frame_2.Size = UDim2.new(0, 335, 0, 291)
 
 TextButton1.Name = "TextButton 1"
 TextButton1.Parent = Frame_2
@@ -98,8 +98,8 @@ TextLabel.Parent = Frame
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 162, 0)
 TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(0.0330470726, 0, 0.0403726697, 0)
-TextLabel.Size = UDim2.new(0, 343, 0, 19)
+TextLabel.Position = UDim2.new(0.0330923125, 0, 0.0401511379, 0)
+TextLabel.Size = UDim2.new(0, 321, 0, 17)
 TextLabel.Font = Enum.Font.Unknown
 TextLabel.Text = "Gu1 K0kac0l1 16"
 TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -112,8 +112,8 @@ ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageButton.BackgroundTransparency = 1.000
 ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ImageButton.BorderSizePixel = 0
-ImageButton.Position = UDim2.new(0.725506365, 0, -0.0183732584, 0)
-ImageButton.Size = UDim2.new(0, 100, 0, 96)
+ImageButton.Position = UDim2.new(0.703065515, 0, -0.0183732584, 0)
+ImageButton.Size = UDim2.new(0, 93, 0, 89)
 ImageButton.Image = "rbxassetid://129027737518656"
 
 ScreenGui_2.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -121,7 +121,7 @@ ScreenGui_2.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 -- Scripts:
 
-local function QYPDDN_fake_script() -- Frame.LocalScript 
+local function NRXDR_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService('UserInputService')
@@ -195,8 +195,8 @@ local function QYPDDN_fake_script() -- Frame.LocalScript
 	
 	
 end
-coroutine.wrap(QYPDDN_fake_script)()
-local function ADKYYHH_fake_script() -- TextButton1.LocalScript 
+coroutine.wrap(NRXDR_fake_script)()
+local function EVWML_fake_script() -- TextButton1.LocalScript 
 	local script = Instance.new('LocalScript', TextButton1)
 
 	local button = script.Parent
@@ -238,8 +238,8 @@ local function ADKYYHH_fake_script() -- TextButton1.LocalScript
 		onCharacterAdded(player.Character)
 	end
 end
-coroutine.wrap(ADKYYHH_fake_script)()
-local function CFELVXW_fake_script() -- TextButton2.LocalScript 
+coroutine.wrap(EVWML_fake_script)()
+local function JXFV_fake_script() -- TextButton2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton2)
 
 	local Player = game:GetService("Players").LocalPlayer --Sets up variable for the Player
@@ -271,138 +271,14 @@ local function CFELVXW_fake_script() -- TextButton2.LocalScript
 		end
 	end)
 end
-coroutine.wrap(CFELVXW_fake_script)()
-local function KAVAAD_fake_script() -- TextButton3.LocalScript 
+coroutine.wrap(JXFV_fake_script)()
+local function OMOHA_fake_script() -- TextButton3.LocalScript 
 	local script = Instance.new('LocalScript', TextButton3)
 
-	-- LocalScript (ИДЕАЛЬНЫЙ для ПК+МОБИЛКИ!)
-	local Players = game:GetService("Players")
-	local UserInputService = game:GetService("UserInputService")
-	local RunService = game:GetService("RunService")
-	
-	local player = Players.LocalPlayer
-	local flying = false
-	local flySpeed = 50
-	local bodyVelocity = nil
-	local flyConnection = nil
-	
-	-- ЗАМЕНИ НА СВОЮ TextButton!
-	local flyButton = script.Parent.Frame:WaitForChild("FlyButton")
-	
-	local function startFlying()
-		local character = player.Character
-		if not character then return end
-		local rootPart = character:FindFirstChild("HumanoidRootPart")
-		if not rootPart then return end
-	
-		flying = true
-	
-		bodyVelocity = Instance.new("BodyVelocity")
-		bodyVelocity.MaxForce = Vector3.new(1e5, 1e5, 1e5)
-		bodyVelocity.Velocity = Vector3.new()
-		bodyVelocity.Parent = rootPart
-	
-		flyConnection = RunService.Heartbeat:Connect(function()
-			if not flying or not rootPart.Parent then return end
-	
-			local camera = workspace.CurrentCamera
-			local moveVector = Vector3.new()
-	
-			-- ✅ ПК: WASD + Space/Shift
-			if UserInputService:IsKeyDown(Enum.KeyCode.W) then
-				moveVector = moveVector + camera.CFrame.LookVector
-			end
-			if UserInputService:IsKeyDown(Enum.KeyCode.S) then
-				moveVector = moveVector - camera.CFrame.LookVector
-			end
-			if UserInputService:IsKeyDown(Enum.KeyCode.A) then
-				moveVector = moveVector - camera.CFrame.RightVector
-			end
-			if UserInputService:IsKeyDown(Enum.KeyCode.D) then
-				moveVector = moveVector + camera.CFrame.RightVector
-			end
-			if UserInputService:IsKeyDown(Enum.KeyCode.Space) then
-				moveVector = moveVector + Vector3.new(0, 1, 0)
-			end
-			if UserInputService:IsKeyDown(Enum.KeyCode.LeftShift) then
-				moveVector = moveVector - Vector3.new(0, 1, 0)
-			end
-	
-			-- ✅ МОБИЛКА: стандартный джойстик + камера!
-			local humanoid = character:FindFirstChild("Humanoid")
-			if humanoid then
-				local moveDir = humanoid.MoveDirection -- ДЖОЙСТИК!
-	
-				if moveDir.Magnitude > 0 then
-					local forward = camera.CFrame.LookVector
-					local right = camera.CFrame.RightVector
-					moveVector = moveVector + (forward * moveDir.Z + right * moveDir.X)
-				end
-	
-				-- 🎮 АВТОВЗЛЁТ: смотришь вверх = летишь вверх!
-				local lookUp = -camera.CFrame.LookVector.Y -- 1=вверх, -1=вниз
-				if math.abs(lookUp) > 0.2 then
-					moveVector = moveVector + Vector3.new(0, lookUp * 2, 0)
-				end
-			end
-	
-			bodyVelocity.Velocity = moveVector.Unit * flySpeed
-		end)
-	end
-	
-	local function stopFlying()
-		flying = false
-		if flyConnection then
-			flyConnection:Disconnect()
-			flyConnection = nil
-		end
-	
-		local character = player.Character
-		if character then
-			local rootPart = character:FindFirstChild("HumanoidRootPart")
-			local humanoid = character:FindFirstChild("Humanoid")
-	
-			if bodyVelocity then
-				bodyVelocity:Destroy()
-				bodyVelocity = nil
-			end
-	
-			-- ❌ НИКАКИХ ПАДЕНИЙ!
-			if rootPart and humanoid then
-				rootPart.Velocity = Vector3.new(0, 0, 0)
-				humanoid.PlatformStand = false
-				humanoid.JumpPower = 50
-			end
-		end
-	end
-	
-	-- 🎯 КНОПКА ПОЛЕТА
-	flyButton.MouseButton1Click:Connect(function()
-		if flying then
-			stopFlying()
-			flyButton.Text = "✈️ Fly OFF"
-			flyButton.BackgroundColor3 = Color3.fromRGB(255, 100, 100)
-		else
-			startFlying()
-			flyButton.Text = "✈️ Fly ON"
-			flyButton.BackgroundColor3 = Color3.fromRGB(100, 255, 100)
-		end
-	end)
-	
-	-- 🔄 РЕСПАВН
-	player.CharacterAdded:Connect(function()
-		task.wait(0.1)
-		if flying then
-			stopFlying()
-			startFlying()
-		end
-	end)
-	
-	print("✅ Fly ПК(клавиши)+МОБИЛКА(джойстик+камера) готов!")
 	
 end
-coroutine.wrap(KAVAAD_fake_script)()
-local function ZGYOOWI_fake_script() -- TextButton4.LocalScript 
+coroutine.wrap(OMOHA_fake_script)()
+local function XHNE_fake_script() -- TextButton4.LocalScript 
 	local script = Instance.new('LocalScript', TextButton4)
 
 	local button = script.Parent
@@ -428,8 +304,8 @@ local function ZGYOOWI_fake_script() -- TextButton4.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ZGYOOWI_fake_script)()
-local function VNBIGM_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(XHNE_fake_script)()
+local function MROYBK_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	local button = script.Parent
@@ -459,8 +335,8 @@ local function VNBIGM_fake_script() -- ImageButton.LocalScript
 	-- Используем событие Activated для ImageButton (поддерживает клик)
 	button.Activated:Connect(toggleGUI)
 end
-coroutine.wrap(VNBIGM_fake_script)()
-local function INOWE_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(MROYBK_fake_script)()
+local function HJCZ_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	local UIS = game:GetService('UserInputService')
@@ -534,8 +410,8 @@ local function INOWE_fake_script() -- ImageButton.LocalScript
 	
 	
 end
-coroutine.wrap(INOWE_fake_script)()
-local function TNXXZJ_fake_script() -- ScreenGui_2.LocalScript 
+coroutine.wrap(HJCZ_fake_script)()
+local function JYEZMK_fake_script() -- ScreenGui_2.LocalScript 
 	local script = Instance.new('LocalScript', ScreenGui_2)
 
 	local Players = game:GetService("Players")
@@ -704,4 +580,4 @@ local function TNXXZJ_fake_script() -- ScreenGui_2.LocalScript
 	print("💨 МАКСИМАЛЬНАЯ СКОРОСТЬ | НИКОГДА НЕ ОТСТАЁТ!")
 	
 end
-coroutine.wrap(TNXXZJ_fake_script)()
+coroutine.wrap(JYEZMK_fake_script)()
