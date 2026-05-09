@@ -8,7 +8,6 @@ local Frame = Instance.new("Frame")
 local Frame_2 = Instance.new("Frame")
 local TextButton1 = Instance.new("TextButton")
 local TextButton2 = Instance.new("TextButton")
-local TextButton3 = Instance.new("TextButton")
 local TextButton4 = Instance.new("TextButton")
 local TextLabel = Instance.new("TextLabel")
 local ImageButton = Instance.new("ImageButton")
@@ -25,14 +24,14 @@ Frame.BackgroundColor3 = Color3.fromRGB(255, 149, 0)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
 Frame.Position = UDim2.new(0.35688597, 0, -0.001496771, 0)
-Frame.Size = UDim2.new(0, 346, 0, 302)
+Frame.Size = UDim2.new(0.244695902, 0, 0.377028704, 0)
 
 Frame_2.Parent = Frame
 Frame_2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame_2.BorderSizePixel = 0
 Frame_2.Position = UDim2.new(0.0141473161, 0, 0.0182998702, 0)
-Frame_2.Size = UDim2.new(0, 335, 0, 291)
+Frame_2.Size = UDim2.new(0.968208075, 0, 0.963576138, 0)
 
 TextButton1.Name = "TextButton 1"
 TextButton1.Parent = Frame_2
@@ -40,7 +39,7 @@ TextButton1.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
 TextButton1.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton1.BorderSizePixel = 0
 TextButton1.Position = UDim2.new(0.0579315685, 0, 0.858703315, 0)
-TextButton1.Size = UDim2.new(0, 86, 0, 28)
+TextButton1.Size = UDim2.new(0.25671643, 0, 0.0962199345, 0)
 TextButton1.AutoButtonColor = false
 TextButton1.Font = Enum.Font.Unknown
 TextButton1.Text = "SPEED"
@@ -55,7 +54,7 @@ TextButton2.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
 TextButton2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton2.BorderSizePixel = 0
 TextButton2.Position = UDim2.new(0.381953925, 0, 0.858703315, 0)
-TextButton2.Size = UDim2.new(0, 86, 0, 28)
+TextButton2.Size = UDim2.new(0.25671643, 0, 0.0962199345, 0)
 TextButton2.AutoButtonColor = false
 TextButton2.Font = Enum.Font.Unknown
 TextButton2.Text = "NOCLIP"
@@ -64,28 +63,13 @@ TextButton2.TextScaled = true
 TextButton2.TextSize = 14.000
 TextButton2.TextWrapped = true
 
-TextButton3.Name = "TextButton 3"
-TextButton3.Parent = Frame_2
-TextButton3.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
-TextButton3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextButton3.BorderSizePixel = 0
-TextButton3.Position = UDim2.new(0.692009807, 0, 0.858703315, 0)
-TextButton3.Size = UDim2.new(0, 86, 0, 28)
-TextButton3.AutoButtonColor = false
-TextButton3.Font = Enum.Font.Unknown
-TextButton3.Text = "FLY"
-TextButton3.TextColor3 = Color3.fromRGB(0, 0, 0)
-TextButton3.TextScaled = true
-TextButton3.TextSize = 14.000
-TextButton3.TextWrapped = true
-
 TextButton4.Name = "TextButton 4"
 TextButton4.Parent = Frame_2
 TextButton4.BackgroundColor3 = Color3.fromRGB(255, 170, 0)
 TextButton4.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextButton4.BorderSizePixel = 0
-TextButton4.Position = UDim2.new(0.0579315685, 0, 0.719993651, 0)
-TextButton4.Size = UDim2.new(0, 86, 0, 28)
+TextButton4.Position = UDim2.new(0.690767467, 0, 0.857450783, 0)
+TextButton4.Size = UDim2.new(0.25671643, 0, 0.0962199345, 0)
 TextButton4.AutoButtonColor = false
 TextButton4.Font = Enum.Font.Unknown
 TextButton4.Text = "TP"
@@ -99,7 +83,7 @@ TextLabel.BackgroundColor3 = Color3.fromRGB(255, 162, 0)
 TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.BorderSizePixel = 0
 TextLabel.Position = UDim2.new(0.0330923125, 0, 0.0401511379, 0)
-TextLabel.Size = UDim2.new(0, 321, 0, 17)
+TextLabel.Size = UDim2.new(0.92774564, 0, 0.0562913902, 0)
 TextLabel.Font = Enum.Font.Unknown
 TextLabel.Text = "Gu1 K0kac0l1 16"
 TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -113,7 +97,7 @@ ImageButton.BackgroundTransparency = 1.000
 ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ImageButton.BorderSizePixel = 0
 ImageButton.Position = UDim2.new(0.703065515, 0, -0.0183732584, 0)
-ImageButton.Size = UDim2.new(0, 93, 0, 89)
+ImageButton.Size = UDim2.new(0.0657708645, 0, 0.111111112, 0)
 ImageButton.Image = "rbxassetid://129027737518656"
 
 ScreenGui_2.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -121,7 +105,7 @@ ScreenGui_2.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 -- Scripts:
 
-local function NRXDR_fake_script() -- Frame.LocalScript 
+local function HOOFBQ_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService('UserInputService')
@@ -195,8 +179,8 @@ local function NRXDR_fake_script() -- Frame.LocalScript
 	
 	
 end
-coroutine.wrap(NRXDR_fake_script)()
-local function EVWML_fake_script() -- TextButton1.LocalScript 
+coroutine.wrap(HOOFBQ_fake_script)()
+local function VVCP_fake_script() -- TextButton1.LocalScript 
 	local script = Instance.new('LocalScript', TextButton1)
 
 	local button = script.Parent
@@ -238,8 +222,8 @@ local function EVWML_fake_script() -- TextButton1.LocalScript
 		onCharacterAdded(player.Character)
 	end
 end
-coroutine.wrap(EVWML_fake_script)()
-local function JXFV_fake_script() -- TextButton2.LocalScript 
+coroutine.wrap(VVCP_fake_script)()
+local function DAID_fake_script() -- TextButton2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton2)
 
 	local Player = game:GetService("Players").LocalPlayer --Sets up variable for the Player
@@ -271,14 +255,8 @@ local function JXFV_fake_script() -- TextButton2.LocalScript
 		end
 	end)
 end
-coroutine.wrap(JXFV_fake_script)()
-local function OMOHA_fake_script() -- TextButton3.LocalScript 
-	local script = Instance.new('LocalScript', TextButton3)
-
-	
-end
-coroutine.wrap(OMOHA_fake_script)()
-local function XHNE_fake_script() -- TextButton4.LocalScript 
+coroutine.wrap(DAID_fake_script)()
+local function YHSPJSY_fake_script() -- TextButton4.LocalScript 
 	local script = Instance.new('LocalScript', TextButton4)
 
 	local button = script.Parent
@@ -304,8 +282,8 @@ local function XHNE_fake_script() -- TextButton4.LocalScript
 		end
 	end)
 end
-coroutine.wrap(XHNE_fake_script)()
-local function MROYBK_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(YHSPJSY_fake_script)()
+local function IOPUI_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	local button = script.Parent
@@ -335,8 +313,8 @@ local function MROYBK_fake_script() -- ImageButton.LocalScript
 	-- Используем событие Activated для ImageButton (поддерживает клик)
 	button.Activated:Connect(toggleGUI)
 end
-coroutine.wrap(MROYBK_fake_script)()
-local function HJCZ_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(IOPUI_fake_script)()
+local function NSRA_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	local UIS = game:GetService('UserInputService')
@@ -410,8 +388,8 @@ local function HJCZ_fake_script() -- ImageButton.LocalScript
 	
 	
 end
-coroutine.wrap(HJCZ_fake_script)()
-local function JYEZMK_fake_script() -- ScreenGui_2.LocalScript 
+coroutine.wrap(NSRA_fake_script)()
+local function OTUZJYT_fake_script() -- ScreenGui_2.LocalScript 
 	local script = Instance.new('LocalScript', ScreenGui_2)
 
 	local Players = game:GetService("Players")
@@ -580,4 +558,4 @@ local function JYEZMK_fake_script() -- ScreenGui_2.LocalScript
 	print("💨 МАКСИМАЛЬНАЯ СКОРОСТЬ | НИКОГДА НЕ ОТСТАЁТ!")
 	
 end
-coroutine.wrap(JYEZMK_fake_script)()
+coroutine.wrap(OTUZJYT_fake_script)()
