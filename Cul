@@ -137,7 +137,7 @@ Lightplayer.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 -- Scripts:
 
-local function BVRPPE_fake_script() -- Frame.LocalScript 
+local function EGLVQSN_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService('UserInputService')
@@ -211,8 +211,8 @@ local function BVRPPE_fake_script() -- Frame.LocalScript
 	
 	
 end
-coroutine.wrap(BVRPPE_fake_script)()
-local function ZHHY_fake_script() -- TextButton1.LocalScript 
+coroutine.wrap(EGLVQSN_fake_script)()
+local function XPZU_fake_script() -- TextButton1.LocalScript 
 	local script = Instance.new('LocalScript', TextButton1)
 
 	local button = script.Parent
@@ -254,8 +254,8 @@ local function ZHHY_fake_script() -- TextButton1.LocalScript
 		onCharacterAdded(player.Character)
 	end
 end
-coroutine.wrap(ZHHY_fake_script)()
-local function NEGHBBH_fake_script() -- TextButton2.LocalScript 
+coroutine.wrap(XPZU_fake_script)()
+local function OJEITK_fake_script() -- TextButton2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton2)
 
 	local Player = game:GetService("Players").LocalPlayer --Sets up variable for the Player
@@ -287,8 +287,8 @@ local function NEGHBBH_fake_script() -- TextButton2.LocalScript
 		end
 	end)
 end
-coroutine.wrap(NEGHBBH_fake_script)()
-local function UWKNVWJ_fake_script() -- TextButton3.LocalScript 
+coroutine.wrap(OJEITK_fake_script)()
+local function HLCFVJW_fake_script() -- TextButton3.LocalScript 
 	local script = Instance.new('LocalScript', TextButton3)
 
 	local button = script.Parent
@@ -314,8 +314,8 @@ local function UWKNVWJ_fake_script() -- TextButton3.LocalScript
 		end
 	end)
 end
-coroutine.wrap(UWKNVWJ_fake_script)()
-local function VRQBJH_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(HLCFVJW_fake_script)()
+local function CXJMTD_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	local button = script.Parent
@@ -345,8 +345,8 @@ local function VRQBJH_fake_script() -- ImageButton.LocalScript
 	-- Используем событие Activated для ImageButton (поддерживает клик)
 	button.Activated:Connect(toggleGUI)
 end
-coroutine.wrap(VRQBJH_fake_script)()
-local function VTLGN_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(CXJMTD_fake_script)()
+local function UUQT_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	local UIS = game:GetService('UserInputService')
@@ -420,8 +420,8 @@ local function VTLGN_fake_script() -- ImageButton.LocalScript
 	
 	
 end
-coroutine.wrap(VTLGN_fake_script)()
-local function MSXQQ_fake_script() -- Godsmile.LocalScript 
+coroutine.wrap(UUQT_fake_script)()
+local function KAOJ_fake_script() -- Godsmile.LocalScript 
 	local script = Instance.new('LocalScript', Godsmile)
 
 	local Players = game:GetService("Players")
@@ -590,8 +590,8 @@ local function MSXQQ_fake_script() -- Godsmile.LocalScript
 	print("💨 МАКСИМАЛЬНАЯ СКОРОСТЬ | НИКОГДА НЕ ОТСТАЁТ!")
 	
 end
-coroutine.wrap(MSXQQ_fake_script)()
-local function NSDJQFD_fake_script() -- Light.LocalScript 
+coroutine.wrap(KAOJ_fake_script)()
+local function EWTNK_fake_script() -- Light.LocalScript 
 	local script = Instance.new('LocalScript', Light)
 
 	--[[
@@ -704,8 +704,8 @@ local function NSDJQFD_fake_script() -- Light.LocalScript
 	_G.FullBrightExecuted = true
 	_G.FullBrightEnabled = not _G.FullBrightEnabled
 end
-coroutine.wrap(NSDJQFD_fake_script)()
-local function IOHO_fake_script() -- Lightplayer.LocalScript 
+coroutine.wrap(EWTNK_fake_script)()
+local function CFBW_fake_script() -- Lightplayer.LocalScript 
 	local script = Instance.new('LocalScript', Lightplayer)
 
 	local Players = game:GetService("Players")
@@ -717,7 +717,7 @@ local function IOHO_fake_script() -- Lightplayer.LocalScript
 			local highlight = Instance.new("Highlight")
 			highlight.Name = "ESPHighlight"
 			highlight.FillColor = Color3.fromRGB(255, 157, 0)
-			highlight.OutlineColor = Color3.fromRGB(255, 255, 255)
+			highlight.OutlineColor = Color3.fromRGB(255, 170, 0)
 			highlight.FillTransparency = 0.6 -- ปรับให้จางลง
 			highlight.OutlineTransparency = 0
 			highlight.Adornee = player.Character
@@ -765,7 +765,7 @@ local function IOHO_fake_script() -- Lightplayer.LocalScript
 			if player.Character.Humanoid.Health <= 0 then
 				player.Character.ESPHighlight.FillColor = Color3.fromRGB(255, 170, 0) -- แดงเข้มตอนตาย
 			else
-				player.Character.ESPHighlight.FillColor = Color3.fromRGB(255, 0, 0) -- แดงสดตอนอยู่
+				player.Character.ESPHighlight.FillColor = Color3.fromRGB(255, 247, 0) -- แดงสดตอนอยู่
 			end
 		end
 	end
@@ -808,4 +808,4 @@ local function IOHO_fake_script() -- Lightplayer.LocalScript
 		wait(0.3)
 	end
 end
-coroutine.wrap(IOHO_fake_script)()
+coroutine.wrap(CFBW_fake_script)()
