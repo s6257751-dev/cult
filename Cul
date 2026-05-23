@@ -3,6 +3,7 @@
 
 -- Instances:
 
+local Godsmile = Instance.new("ScreenGui")
 local Gui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local Frame_2 = Instance.new("Frame")
@@ -16,11 +17,14 @@ local TextLabel = Instance.new("TextLabel")
 local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
 local ImageButton = Instance.new("ImageButton")
 local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
-local Godsmile = Instance.new("ScreenGui")
 local Light = Instance.new("ScreenGui")
 local Lightplayer = Instance.new("ScreenGui")
 
 --Properties:
+
+Godsmile.Name = "God smile"
+Godsmile.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Godsmile.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Gui.Name = "Gui"
 Gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -123,10 +127,6 @@ ImageButton.Image = "rbxassetid://129027737518656"
 UIAspectRatioConstraint_4.Parent = ImageButton
 UIAspectRatioConstraint_4.AspectRatio = 1.034
 
-Godsmile.Name = "God smile"
-Godsmile.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-Godsmile.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
 Light.Name = "Light"
 Light.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 Light.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -137,291 +137,7 @@ Lightplayer.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 -- Scripts:
 
-local function EGLVQSN_fake_script() -- Frame.LocalScript 
-	local script = Instance.new('LocalScript', Frame)
-
-	local UIS = game:GetService('UserInputService')
-	
-	local frame = script.Parent
-	
-	
-	local dragToggle = nil
-	
-	local dragSpeed = 0.25
-	
-	local dragStart = nil
-	
-	local startPos = nil
-	
-	
-	
-	local function updateInput(input)
-	
-		local delta = input.Position - dragStart
-	
-		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
-	
-			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-	
-		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
-	
-	end
-	
-	
-	
-	frame.InputBegan:Connect(function(input)
-	
-		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
-	
-			dragToggle = true
-	
-			dragStart = input.Position
-	
-			startPos = frame.Position
-	
-			input.Changed:Connect(function()
-	
-				if input.UserInputState == Enum.UserInputState.End then
-	
-					dragToggle = false
-	
-				end
-	
-			end)
-	
-		end
-	
-	end)
-	
-	
-	
-	UIS.InputChanged:Connect(function(input)
-	
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-	
-			if dragToggle then
-	
-				updateInput(input)
-	
-			end
-	
-		end
-	
-	end)
-	
-	
-end
-coroutine.wrap(EGLVQSN_fake_script)()
-local function XPZU_fake_script() -- TextButton1.LocalScript 
-	local script = Instance.new('LocalScript', TextButton1)
-
-	local button = script.Parent
-	local superSpeed = 2500
-	local normalSpeed = 16 -- стандартная скорость по умолчанию
-	local isSpeedActive = false -- состояние включения скорости
-	
-	local function toggleSpeed()
-		local player = game.Players.LocalPlayer
-		if not player.Character then return end
-		local humanoid = player.Character:FindFirstChildOfClass("Humanoid")
-		if not humanoid then return end
-	
-		if not isSpeedActive then
-			-- Включаем суперскорость
-			humanoid.WalkSpeed = superSpeed
-			isSpeedActive = true
-		else
-			-- Выключаем и возвращаем стандартную скорость
-			humanoid.WalkSpeed = normalSpeed
-			isSpeedActive = false
-		end
-	end
-	
-	button.MouseButton1Click:Connect(toggleSpeed)
-	
-	-- Обработчик, если персонаж умирает и возрождается
-	local player = game.Players.LocalPlayer
-	local function onCharacterAdded(character)
-		local humanoid = character:WaitForChild("Humanoid")
-		-- При возрождении сбрасываем скорость и состояние
-		humanoid.WalkSpeed = normalSpeed
-		isSpeedActive = false
-	end
-	
-	player.CharacterAdded:Connect(onCharacterAdded)
-	-- Если персонаж уже есть при запуске
-	if player.Character then
-		onCharacterAdded(player.Character)
-	end
-end
-coroutine.wrap(XPZU_fake_script)()
-local function OJEITK_fake_script() -- TextButton2.LocalScript 
-	local script = Instance.new('LocalScript', TextButton2)
-
-	local Player = game:GetService("Players").LocalPlayer --Sets up variable for the Player
-	local RunService = game:GetService("RunService") --Sets up variable for the RunService
-	
-	local isnoclipping = false --Sets the no-clip to initialy false
-	
-	script.Parent.MouseButton1Click:Connect(function()
-		if isnoclipping== true then
-			isnoclipping=false
-			script.Parent.Text = "NOCLIP OFF" --Changes the text to OFF
-			script.Parent.BackgroundColor3 = Color3.new(1, 0.666667, 0) --Bright Red Color
-		else	
-			isnoclipping=true
-			script.Parent.Text = "NOCLIP ON" --Changes the text to ON
-			script.Parent.BackgroundColor3 = Color3.new(1, 0.666667, 0) --Bright Green Color
-		end
-	end)
-	
-	RunService.Stepped:Connect(function()
-		if Player.Character then
-			if isnoclipping == true then
-				for i,v in pairs(Player.Character:GetDescendants()) do
-					if v:IsA("BasePart") then
-						v.CanCollide = false
-					end
-				end
-			end	
-		end
-	end)
-end
-coroutine.wrap(OJEITK_fake_script)()
-local function HLCFVJW_fake_script() -- TextButton3.LocalScript 
-	local script = Instance.new('LocalScript', TextButton3)
-
-	local button = script.Parent
-	local player = game.Players.LocalPlayer
-	local mouse = player:GetMouse()
-	local teleportMode = false
-	
-	button.Text = "TP"
-	
-	button.MouseButton1Click:Connect(function()
-		teleportMode = not teleportMode
-		button.Text = teleportMode and "TP ON" or "ТP OFF"
-	end)
-	
-	mouse.Button1Down:Connect(function()
-		if teleportMode then
-			local character = player.Character
-			if character and character:FindFirstChild("HumanoidRootPart") then
-				local hrp = character.HumanoidRootPart
-				local pos = mouse.Hit.p
-				hrp.CFrame = CFrame.new(pos + Vector3.new(0, 3, 0)) -- приподнимает над точкой, чтобы не застрял
-			end
-		end
-	end)
-end
-coroutine.wrap(HLCFVJW_fake_script)()
-local function CXJMTD_fake_script() -- ImageButton.LocalScript 
-	local script = Instance.new('LocalScript', ImageButton)
-
-	local button = script.Parent
-	local isOpen = true -- состояние, открыто или закрыто
-	
-	local function toggleGUI()
-		local parentGui = button.Parent
-		if isOpen then
-			-- скрываем все, кроме самой кнопки
-			for _, child in pairs(parentGui:GetChildren()) do
-				if child ~= button and child:IsA("GuiObject") then
-					child.Visible = false
-				end
-			end
-			isOpen = false
-		else
-			-- показываем всё обратно
-			for _, child in pairs(parentGui:GetChildren()) do
-				if child ~= button and child:IsA("GuiObject") then
-					child.Visible = true
-				end
-			end
-			isOpen = true
-		end
-	end
-	
-	-- Используем событие Activated для ImageButton (поддерживает клик)
-	button.Activated:Connect(toggleGUI)
-end
-coroutine.wrap(CXJMTD_fake_script)()
-local function UUQT_fake_script() -- ImageButton.LocalScript 
-	local script = Instance.new('LocalScript', ImageButton)
-
-	local UIS = game:GetService('UserInputService')
-	
-	local frame = script.Parent
-	
-	
-	local dragToggle = nil
-	
-	local dragSpeed = 0.25
-	
-	local dragStart = nil
-	
-	local startPos = nil
-	
-	
-	
-	local function updateInput(input)
-	
-		local delta = input.Position - dragStart
-	
-		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
-	
-			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-	
-		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
-	
-	end
-	
-	
-	
-	frame.InputBegan:Connect(function(input)
-	
-		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
-	
-			dragToggle = true
-	
-			dragStart = input.Position
-	
-			startPos = frame.Position
-	
-			input.Changed:Connect(function()
-	
-				if input.UserInputState == Enum.UserInputState.End then
-	
-					dragToggle = false
-	
-				end
-	
-			end)
-	
-		end
-	
-	end)
-	
-	
-	
-	UIS.InputChanged:Connect(function(input)
-	
-		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-	
-			if dragToggle then
-	
-				updateInput(input)
-	
-			end
-	
-		end
-	
-	end)
-	
-	
-end
-coroutine.wrap(UUQT_fake_script)()
-local function KAOJ_fake_script() -- Godsmile.LocalScript 
+local function VWODJ_fake_script() -- Godsmile.LocalScript 
 	local script = Instance.new('LocalScript', Godsmile)
 
 	local Players = game:GetService("Players")
@@ -590,8 +306,292 @@ local function KAOJ_fake_script() -- Godsmile.LocalScript
 	print("💨 МАКСИМАЛЬНАЯ СКОРОСТЬ | НИКОГДА НЕ ОТСТАЁТ!")
 	
 end
-coroutine.wrap(KAOJ_fake_script)()
-local function EWTNK_fake_script() -- Light.LocalScript 
+coroutine.wrap(VWODJ_fake_script)()
+local function CHKDNIE_fake_script() -- Frame.LocalScript 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UIS = game:GetService('UserInputService')
+	
+	local frame = script.Parent
+	
+	
+	local dragToggle = nil
+	
+	local dragSpeed = 0.25
+	
+	local dragStart = nil
+	
+	local startPos = nil
+	
+	
+	
+	local function updateInput(input)
+	
+		local delta = input.Position - dragStart
+	
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+	
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	
+	end
+	
+	
+	
+	frame.InputBegan:Connect(function(input)
+	
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+	
+			dragToggle = true
+	
+			dragStart = input.Position
+	
+			startPos = frame.Position
+	
+			input.Changed:Connect(function()
+	
+				if input.UserInputState == Enum.UserInputState.End then
+	
+					dragToggle = false
+	
+				end
+	
+			end)
+	
+		end
+	
+	end)
+	
+	
+	
+	UIS.InputChanged:Connect(function(input)
+	
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	
+			if dragToggle then
+	
+				updateInput(input)
+	
+			end
+	
+		end
+	
+	end)
+	
+	
+end
+coroutine.wrap(CHKDNIE_fake_script)()
+local function CYWM_fake_script() -- TextButton1.LocalScript 
+	local script = Instance.new('LocalScript', TextButton1)
+
+	local button = script.Parent
+	local superSpeed = 2500
+	local normalSpeed = 16 -- стандартная скорость по умолчанию
+	local isSpeedActive = false -- состояние включения скорости
+	
+	local function toggleSpeed()
+		local player = game.Players.LocalPlayer
+		if not player.Character then return end
+		local humanoid = player.Character:FindFirstChildOfClass("Humanoid")
+		if not humanoid then return end
+	
+		if not isSpeedActive then
+			-- Включаем суперскорость
+			humanoid.WalkSpeed = superSpeed
+			isSpeedActive = true
+		else
+			-- Выключаем и возвращаем стандартную скорость
+			humanoid.WalkSpeed = normalSpeed
+			isSpeedActive = false
+		end
+	end
+	
+	button.MouseButton1Click:Connect(toggleSpeed)
+	
+	-- Обработчик, если персонаж умирает и возрождается
+	local player = game.Players.LocalPlayer
+	local function onCharacterAdded(character)
+		local humanoid = character:WaitForChild("Humanoid")
+		-- При возрождении сбрасываем скорость и состояние
+		humanoid.WalkSpeed = normalSpeed
+		isSpeedActive = false
+	end
+	
+	player.CharacterAdded:Connect(onCharacterAdded)
+	-- Если персонаж уже есть при запуске
+	if player.Character then
+		onCharacterAdded(player.Character)
+	end
+end
+coroutine.wrap(CYWM_fake_script)()
+local function RMPXOH_fake_script() -- TextButton2.LocalScript 
+	local script = Instance.new('LocalScript', TextButton2)
+
+	local Player = game:GetService("Players").LocalPlayer --Sets up variable for the Player
+	local RunService = game:GetService("RunService") --Sets up variable for the RunService
+	
+	local isnoclipping = false --Sets the no-clip to initialy false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if isnoclipping== true then
+			isnoclipping=false
+			script.Parent.Text = "NOCLIP OFF" --Changes the text to OFF
+			script.Parent.BackgroundColor3 = Color3.new(1, 0.666667, 0) --Bright Red Color
+		else	
+			isnoclipping=true
+			script.Parent.Text = "NOCLIP ON" --Changes the text to ON
+			script.Parent.BackgroundColor3 = Color3.new(1, 0.666667, 0) --Bright Green Color
+		end
+	end)
+	
+	RunService.Stepped:Connect(function()
+		if Player.Character then
+			if isnoclipping == true then
+				for i,v in pairs(Player.Character:GetDescendants()) do
+					if v:IsA("BasePart") then
+						v.CanCollide = false
+					end
+				end
+			end	
+		end
+	end)
+end
+coroutine.wrap(RMPXOH_fake_script)()
+local function MJYDY_fake_script() -- TextButton3.LocalScript 
+	local script = Instance.new('LocalScript', TextButton3)
+
+	local button = script.Parent
+	local player = game.Players.LocalPlayer
+	local mouse = player:GetMouse()
+	local teleportMode = false
+	
+	button.Text = "TP"
+	
+	button.MouseButton1Click:Connect(function()
+		teleportMode = not teleportMode
+		button.Text = teleportMode and "TP ON" or "ТP OFF"
+	end)
+	
+	mouse.Button1Down:Connect(function()
+		if teleportMode then
+			local character = player.Character
+			if character and character:FindFirstChild("HumanoidRootPart") then
+				local hrp = character.HumanoidRootPart
+				local pos = mouse.Hit.p
+				hrp.CFrame = CFrame.new(pos + Vector3.new(0, 3, 0)) -- приподнимает над точкой, чтобы не застрял
+			end
+		end
+	end)
+end
+coroutine.wrap(MJYDY_fake_script)()
+local function TYLIL_fake_script() -- ImageButton.LocalScript 
+	local script = Instance.new('LocalScript', ImageButton)
+
+	local button = script.Parent
+	local isOpen = true -- состояние, открыто или закрыто
+	
+	local function toggleGUI()
+		local parentGui = button.Parent
+		if isOpen then
+			-- скрываем все, кроме самой кнопки
+			for _, child in pairs(parentGui:GetChildren()) do
+				if child ~= button and child:IsA("GuiObject") then
+					child.Visible = false
+				end
+			end
+			isOpen = false
+		else
+			-- показываем всё обратно
+			for _, child in pairs(parentGui:GetChildren()) do
+				if child ~= button and child:IsA("GuiObject") then
+					child.Visible = true
+				end
+			end
+			isOpen = true
+		end
+	end
+	
+	-- Используем событие Activated для ImageButton (поддерживает клик)
+	button.Activated:Connect(toggleGUI)
+end
+coroutine.wrap(TYLIL_fake_script)()
+local function ILZLYC_fake_script() -- ImageButton.LocalScript 
+	local script = Instance.new('LocalScript', ImageButton)
+
+	local UIS = game:GetService('UserInputService')
+	
+	local frame = script.Parent
+	
+	
+	local dragToggle = nil
+	
+	local dragSpeed = 0.25
+	
+	local dragStart = nil
+	
+	local startPos = nil
+	
+	
+	
+	local function updateInput(input)
+	
+		local delta = input.Position - dragStart
+	
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+	
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	
+	end
+	
+	
+	
+	frame.InputBegan:Connect(function(input)
+	
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+	
+			dragToggle = true
+	
+			dragStart = input.Position
+	
+			startPos = frame.Position
+	
+			input.Changed:Connect(function()
+	
+				if input.UserInputState == Enum.UserInputState.End then
+	
+					dragToggle = false
+	
+				end
+	
+			end)
+	
+		end
+	
+	end)
+	
+	
+	
+	UIS.InputChanged:Connect(function(input)
+	
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	
+			if dragToggle then
+	
+				updateInput(input)
+	
+			end
+	
+		end
+	
+	end)
+	
+	
+end
+coroutine.wrap(ILZLYC_fake_script)()
+local function YDAJERR_fake_script() -- Light.LocalScript 
 	local script = Instance.new('LocalScript', Light)
 
 	--[[
@@ -704,8 +704,8 @@ local function EWTNK_fake_script() -- Light.LocalScript
 	_G.FullBrightExecuted = true
 	_G.FullBrightEnabled = not _G.FullBrightEnabled
 end
-coroutine.wrap(EWTNK_fake_script)()
-local function CFBW_fake_script() -- Lightplayer.LocalScript 
+coroutine.wrap(YDAJERR_fake_script)()
+local function HSEK_fake_script() -- Lightplayer.LocalScript 
 	local script = Instance.new('LocalScript', Lightplayer)
 
 	local Players = game:GetService("Players")
@@ -716,8 +716,8 @@ local function CFBW_fake_script() -- Lightplayer.LocalScript
 		if player.Character and not player.Character:FindFirstChild("ESPHighlight") then
 			local highlight = Instance.new("Highlight")
 			highlight.Name = "ESPHighlight"
-			highlight.FillColor = Color3.fromRGB(255, 157, 0)
-			highlight.OutlineColor = Color3.fromRGB(255, 170, 0)
+			highlight.FillColor = Color3.fromRGB(255, 255, 0)
+			highlight.OutlineColor = Color3.fromRGB(255, 128, 0)
 			highlight.FillTransparency = 0.6 -- ปรับให้จางลง
 			highlight.OutlineTransparency = 0
 			highlight.Adornee = player.Character
@@ -763,9 +763,9 @@ local function CFBW_fake_script() -- Lightplayer.LocalScript
 	local function updateHighlight(player)
 		if player.Character and player.Character:FindFirstChild("ESPHighlight") and player.Character:FindFirstChild("Humanoid") then
 			if player.Character.Humanoid.Health <= 0 then
-				player.Character.ESPHighlight.FillColor = Color3.fromRGB(255, 170, 0) -- แดงเข้มตอนตาย
+				player.Character.ESPHighlight.FillColor = Color3.fromRGB(120, 0, 0) -- แดงเข้มตอนตาย
 			else
-				player.Character.ESPHighlight.FillColor = Color3.fromRGB(255, 247, 0) -- แดงสดตอนอยู่
+				player.Character.ESPHighlight.FillColor = Color3.fromRGB(255, 0, 0) -- แดงสดตอนอยู่
 			end
 		end
 	end
@@ -808,4 +808,4 @@ local function CFBW_fake_script() -- Lightplayer.LocalScript
 		wait(0.3)
 	end
 end
-coroutine.wrap(CFBW_fake_script)()
+coroutine.wrap(HSEK_fake_script)()
