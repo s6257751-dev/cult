@@ -3,7 +3,7 @@
 
 -- Instances:
 
-local ScreenGui = Instance.new("ScreenGui")
+local Gui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local Frame_2 = Instance.new("Frame")
 local TextButton1 = Instance.new("TextButton")
@@ -16,15 +16,18 @@ local TextLabel = Instance.new("TextLabel")
 local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
 local ImageButton = Instance.new("ImageButton")
 local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
-local ScreenGui_2 = Instance.new("ScreenGui")
+local Godsmile = Instance.new("ScreenGui")
+local Light = Instance.new("ScreenGui")
+local Lightplayer = Instance.new("ScreenGui")
 
 --Properties:
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGui.ResetOnSpawn = false
+Gui.Name = "Gui"
+Gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Gui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Gui.ResetOnSpawn = false
 
-Frame.Parent = ScreenGui
+Frame.Parent = Gui
 Frame.BackgroundColor3 = Color3.fromRGB(255, 149, 0)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
@@ -108,7 +111,7 @@ TextLabel.TextWrapped = true
 UITextSizeConstraint.Parent = TextLabel
 UITextSizeConstraint.MaxTextSize = 17
 
-ImageButton.Parent = ScreenGui
+ImageButton.Parent = Gui
 ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageButton.BackgroundTransparency = 1.000
 ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -120,12 +123,21 @@ ImageButton.Image = "rbxassetid://129027737518656"
 UIAspectRatioConstraint_4.Parent = ImageButton
 UIAspectRatioConstraint_4.AspectRatio = 1.034
 
-ScreenGui_2.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui_2.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Godsmile.Name = "God smile"
+Godsmile.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Godsmile.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Light.Name = "Light"
+Light.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Light.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Lightplayer.Name = "Light player"
+Lightplayer.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Lightplayer.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 -- Scripts:
 
-local function NYROF_fake_script() -- Frame.LocalScript 
+local function BVRPPE_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService('UserInputService')
@@ -199,8 +211,8 @@ local function NYROF_fake_script() -- Frame.LocalScript
 	
 	
 end
-coroutine.wrap(NYROF_fake_script)()
-local function TLMM_fake_script() -- TextButton1.LocalScript 
+coroutine.wrap(BVRPPE_fake_script)()
+local function ZHHY_fake_script() -- TextButton1.LocalScript 
 	local script = Instance.new('LocalScript', TextButton1)
 
 	local button = script.Parent
@@ -242,8 +254,8 @@ local function TLMM_fake_script() -- TextButton1.LocalScript
 		onCharacterAdded(player.Character)
 	end
 end
-coroutine.wrap(TLMM_fake_script)()
-local function YRGJMWK_fake_script() -- TextButton2.LocalScript 
+coroutine.wrap(ZHHY_fake_script)()
+local function NEGHBBH_fake_script() -- TextButton2.LocalScript 
 	local script = Instance.new('LocalScript', TextButton2)
 
 	local Player = game:GetService("Players").LocalPlayer --Sets up variable for the Player
@@ -275,8 +287,8 @@ local function YRGJMWK_fake_script() -- TextButton2.LocalScript
 		end
 	end)
 end
-coroutine.wrap(YRGJMWK_fake_script)()
-local function KQXRMF_fake_script() -- TextButton3.LocalScript 
+coroutine.wrap(NEGHBBH_fake_script)()
+local function UWKNVWJ_fake_script() -- TextButton3.LocalScript 
 	local script = Instance.new('LocalScript', TextButton3)
 
 	local button = script.Parent
@@ -302,8 +314,8 @@ local function KQXRMF_fake_script() -- TextButton3.LocalScript
 		end
 	end)
 end
-coroutine.wrap(KQXRMF_fake_script)()
-local function WKZSNDE_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(UWKNVWJ_fake_script)()
+local function VRQBJH_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	local button = script.Parent
@@ -333,8 +345,8 @@ local function WKZSNDE_fake_script() -- ImageButton.LocalScript
 	-- Используем событие Activated для ImageButton (поддерживает клик)
 	button.Activated:Connect(toggleGUI)
 end
-coroutine.wrap(WKZSNDE_fake_script)()
-local function QAJMCY_fake_script() -- ImageButton.LocalScript 
+coroutine.wrap(VRQBJH_fake_script)()
+local function VTLGN_fake_script() -- ImageButton.LocalScript 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	local UIS = game:GetService('UserInputService')
@@ -408,9 +420,9 @@ local function QAJMCY_fake_script() -- ImageButton.LocalScript
 	
 	
 end
-coroutine.wrap(QAJMCY_fake_script)()
-local function GASNCY_fake_script() -- ScreenGui_2.LocalScript 
-	local script = Instance.new('LocalScript', ScreenGui_2)
+coroutine.wrap(VTLGN_fake_script)()
+local function MSXQQ_fake_script() -- Godsmile.LocalScript 
+	local script = Instance.new('LocalScript', Godsmile)
 
 	local Players = game:GetService("Players")
 	local RunService = game:GetService("RunService")
@@ -578,4 +590,222 @@ local function GASNCY_fake_script() -- ScreenGui_2.LocalScript
 	print("💨 МАКСИМАЛЬНАЯ СКОРОСТЬ | НИКОГДА НЕ ОТСТАЁТ!")
 	
 end
-coroutine.wrap(GASNCY_fake_script)()
+coroutine.wrap(MSXQQ_fake_script)()
+local function NSDJQFD_fake_script() -- Light.LocalScript 
+	local script = Instance.new('LocalScript', Light)
+
+	--[[
+		WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+	]]
+	if not _G.FullBrightExecuted then
+	
+		_G.FullBrightEnabled = false
+	
+		_G.NormalLightingSettings = {
+			Brightness = game:GetService("Lighting").Brightness,
+			ClockTime = game:GetService("Lighting").ClockTime,
+			FogEnd = game:GetService("Lighting").FogEnd,
+			GlobalShadows = game:GetService("Lighting").GlobalShadows,
+			Ambient = game:GetService("Lighting").Ambient
+		}
+	
+		game:GetService("Lighting"):GetPropertyChangedSignal("Brightness"):Connect(function()
+			if game:GetService("Lighting").Brightness ~= 1 and game:GetService("Lighting").Brightness ~= _G.NormalLightingSettings.Brightness then
+				_G.NormalLightingSettings.Brightness = game:GetService("Lighting").Brightness
+				if not _G.FullBrightEnabled then
+					repeat
+						wait()
+					until _G.FullBrightEnabled
+				end
+				game:GetService("Lighting").Brightness = 1
+			end
+		end)
+	
+		game:GetService("Lighting"):GetPropertyChangedSignal("ClockTime"):Connect(function()
+			if game:GetService("Lighting").ClockTime ~= 12 and game:GetService("Lighting").ClockTime ~= _G.NormalLightingSettings.ClockTime then
+				_G.NormalLightingSettings.ClockTime = game:GetService("Lighting").ClockTime
+				if not _G.FullBrightEnabled then
+					repeat
+						wait()
+					until _G.FullBrightEnabled
+				end
+				game:GetService("Lighting").ClockTime = 12
+			end
+		end)
+	
+		game:GetService("Lighting"):GetPropertyChangedSignal("FogEnd"):Connect(function()
+			if game:GetService("Lighting").FogEnd ~= 786543 and game:GetService("Lighting").FogEnd ~= _G.NormalLightingSettings.FogEnd then
+				_G.NormalLightingSettings.FogEnd = game:GetService("Lighting").FogEnd
+				if not _G.FullBrightEnabled then
+					repeat
+						wait()
+					until _G.FullBrightEnabled
+				end
+				game:GetService("Lighting").FogEnd = 786543
+			end
+		end)
+	
+		game:GetService("Lighting"):GetPropertyChangedSignal("GlobalShadows"):Connect(function()
+			if game:GetService("Lighting").GlobalShadows ~= false and game:GetService("Lighting").GlobalShadows ~= _G.NormalLightingSettings.GlobalShadows then
+				_G.NormalLightingSettings.GlobalShadows = game:GetService("Lighting").GlobalShadows
+				if not _G.FullBrightEnabled then
+					repeat
+						wait()
+					until _G.FullBrightEnabled
+				end
+				game:GetService("Lighting").GlobalShadows = false
+			end
+		end)
+	
+		game:GetService("Lighting"):GetPropertyChangedSignal("Ambient"):Connect(function()
+			if game:GetService("Lighting").Ambient ~= Color3.fromRGB(178, 178, 178) and game:GetService("Lighting").Ambient ~= _G.NormalLightingSettings.Ambient then
+				_G.NormalLightingSettings.Ambient = game:GetService("Lighting").Ambient
+				if not _G.FullBrightEnabled then
+					repeat
+						wait()
+					until _G.FullBrightEnabled
+				end
+				game:GetService("Lighting").Ambient = Color3.fromRGB(178, 178, 178)
+			end
+		end)
+	
+		game:GetService("Lighting").Brightness = 1
+		game:GetService("Lighting").ClockTime = 12
+		game:GetService("Lighting").FogEnd = 786543
+		game:GetService("Lighting").GlobalShadows = false
+		game:GetService("Lighting").Ambient = Color3.fromRGB(178, 178, 178)
+	
+		local LatestValue = true
+		spawn(function()
+			repeat
+				wait()
+			until _G.FullBrightEnabled
+			while wait() do
+				if _G.FullBrightEnabled ~= LatestValue then
+					if not _G.FullBrightEnabled then
+						game:GetService("Lighting").Brightness = _G.NormalLightingSettings.Brightness
+						game:GetService("Lighting").ClockTime = _G.NormalLightingSettings.ClockTime
+						game:GetService("Lighting").FogEnd = _G.NormalLightingSettings.FogEnd
+						game:GetService("Lighting").GlobalShadows = _G.NormalLightingSettings.GlobalShadows
+						game:GetService("Lighting").Ambient = _G.NormalLightingSettings.Ambient
+					else
+						game:GetService("Lighting").Brightness = 1
+						game:GetService("Lighting").ClockTime = 12
+						game:GetService("Lighting").FogEnd = 786543
+						game:GetService("Lighting").GlobalShadows = false
+						game:GetService("Lighting").Ambient = Color3.fromRGB(178, 178, 178)
+					end
+					LatestValue = not LatestValue
+				end
+			end
+		end)
+	end
+	
+	_G.FullBrightExecuted = true
+	_G.FullBrightEnabled = not _G.FullBrightEnabled
+end
+coroutine.wrap(NSDJQFD_fake_script)()
+local function IOHO_fake_script() -- Lightplayer.LocalScript 
+	local script = Instance.new('LocalScript', Lightplayer)
+
+	local Players = game:GetService("Players")
+	local LocalPlayer = Players.LocalPlayer
+	
+	-- by Boston and ChatGPT
+	local function createHighlight(player)
+		if player.Character and not player.Character:FindFirstChild("ESPHighlight") then
+			local highlight = Instance.new("Highlight")
+			highlight.Name = "ESPHighlight"
+			highlight.FillColor = Color3.fromRGB(255, 157, 0)
+			highlight.OutlineColor = Color3.fromRGB(255, 255, 255)
+			highlight.FillTransparency = 0.6 -- ปรับให้จางลง
+			highlight.OutlineTransparency = 0
+			highlight.Adornee = player.Character
+			highlight.Parent = player.Character
+		end
+	end
+	
+	
+	local function createNameTag(player)
+		if player.Character and player.Character:FindFirstChild("Head") and not player.Character.Head:FindFirstChild("NameTag") then
+			local billboard = Instance.new("BillboardGui")
+			billboard.Name = "NameTag"
+			billboard.Adornee = player.Character.Head
+			billboard.Size = UDim2.new(0, 130, 0, 25) -- ปรับให้เล็กลง
+			billboard.StudsOffset = Vector3.new(0, 2, 0)
+			billboard.AlwaysOnTop = true
+			billboard.Parent = player.Character.Head
+	
+			local textLabel = Instance.new("TextLabel")
+			textLabel.Name = "TagLabel"
+			textLabel.Size = UDim2.new(1, 0, 1, 0)
+			textLabel.BackgroundTransparency = 1
+			textLabel.TextColor3 = Color3.new(1, 1, 1)
+			textLabel.Font = Enum.Font.Cartoon
+			textLabel.TextScaled = true
+			textLabel.TextStrokeTransparency = 0.6
+			textLabel.Text = ""
+			textLabel.Parent = billboard
+		end
+	end
+	
+	
+	local function updateNameTag(player)
+		if player.Character and player.Character:FindFirstChild("Head") and player.Character.Head:FindFirstChild("NameTag") and player.Character:FindFirstChild("Humanoid") then
+			local tag = player.Character.Head.NameTag.TagLabel
+			local distance = (LocalPlayer.Character.PrimaryPart.Position - player.Character.PrimaryPart.Position).Magnitude
+			local health = math.floor(player.Character.Humanoid.Health)
+			tag.Text = player.Name .. " | " .. string.format("%.0f", distance).."m | ❤️"..health
+		end
+	end
+	
+	
+	local function updateHighlight(player)
+		if player.Character and player.Character:FindFirstChild("ESPHighlight") and player.Character:FindFirstChild("Humanoid") then
+			if player.Character.Humanoid.Health <= 0 then
+				player.Character.ESPHighlight.FillColor = Color3.fromRGB(255, 170, 0) -- แดงเข้มตอนตาย
+			else
+				player.Character.ESPHighlight.FillColor = Color3.fromRGB(255, 0, 0) -- แดงสดตอนอยู่
+			end
+		end
+	end
+	
+	
+	local function setupESP(player)
+		if player ~= LocalPlayer then
+			player.CharacterAdded:Connect(function()
+				wait(0.1)
+				createHighlight(player)
+				createNameTag(player)
+			end)
+			if player.Character then
+				createHighlight(player)
+				createNameTag(player)
+			end
+		end
+	end
+	
+	
+	for _, player in ipairs(Players:GetPlayers()) do
+		setupESP(player)
+	end
+	
+	
+	Players.PlayerAdded:Connect(function(player)
+		setupESP(player)
+	end)
+	
+	
+	while true do
+		for _, player in ipairs(Players:GetPlayers()) do
+			if player ~= LocalPlayer then
+				if player.Character and player.Character:FindFirstChild("Humanoid") then
+					updateNameTag(player)
+					updateHighlight(player)
+				end
+			end
+		end
+		wait(0.3)
+	end
+end
+coroutine.wrap(IOHO_fake_script)()
